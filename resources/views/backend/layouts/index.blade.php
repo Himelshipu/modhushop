@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css"
           href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     @livewireStyles
+    @stack('css')
 </head>
 <body class="app sidebar-mini">
 @include('backend.layouts.header');
@@ -26,7 +27,12 @@
 <!-- Page specific javascripts-->
 <script type="text/javascript" src="{{asset('backend/js/plugins/chart.js')}}"></script>
 @livewireScripts
+@stack('script')
 <script type="text/javascript">
+    window.livewire.on('userUpdated',()=>{
+        $('#userUpdateModal').modal('hide');
+    })
+
     var data = {
         labels: ["January", "February", "March", "April", "May"],
         datasets: [

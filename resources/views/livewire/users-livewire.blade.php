@@ -13,19 +13,20 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="tile">
-                     <div class="search">
-                         <input type="text" placeholder="search" style="height: 35px;" class="inline float float-right" wire:model="search">
-                         <h3 class="tile-title">User List</h3>
-                     </div>
+                    <div class="search">
+                        <input type="text" placeholder="search" style="height: 35px;" class="inline float float-right"
+                               wire:model="search">
+                        <h3 class="tile-title">User List</h3>
+                    </div>
                     <table class="table">
                         <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Role</th>
-                                <th>Action</th>
-                            </tr>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Action</th>
+                        </tr>
                         </thead>
                         <tbody>
                         @forelse($users as $index=>$user)
@@ -39,8 +40,11 @@
                                     @endif
                                 </td>
                                 <td>
-                                    <button class="btn btn-primary">Edit</button>
-                                    <button class="btn btn-danger">Delete</button>
+                                    <button type="button" class="btn btn-primary rounded" data-toggle="modal"
+                                            data-target="#userUpdateModal" wire:click.prevent="edit({{$user->id}})">
+                                        Edit
+                                    </button>
+                                    <button class="btn btn-danger rounded">Delete</button>
                                 </td>
                             </tr>
                         @empty
@@ -52,4 +56,5 @@
             </div>
         </div>
     </main>
+    @include('backend.update')
 </div>
