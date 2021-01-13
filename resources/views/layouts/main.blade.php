@@ -112,20 +112,36 @@
                                     <li><a href="{{ ('my-account') }}">Contact</a></li>
                                     <li><a href="{{ ('my-account') }}ml">My Account</a></li>
                                     <li><a href="frequently-questions.html">FAQ</a></li>
-                                    <li><a href="login.html">Login</a></li>
-                                    <li><a href="register.html">Register</a></li>
+                                    <li>
+                                        <a href="{{ 'about' }}">
+                                            About Us
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contact-us.html">
+                                            Contact Us
+                                        </a>
+                                    </li>
+
                                 </ul>
                             </li>
-                            <li>
-                                <a href="{{ 'about' }}">
-                                    <span class="menu-text"> About Us</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="contact-us.html">
-                                    <span class="menu-text">Contact Us</span>
-                                </a>
-                            </li>
+
+
+
+
+                             @if (Route::has('login'))
+                             @auth
+
+                                 <li><a href="{{ url('/logout')  }}"><span class="menu-text">Logout</span></a></li>
+                             @else
+
+                                 <li><a href="{{ route('login') }}"><span class="menu-text">Login</span></a></li>
+                                 @if (Route::has('register'))
+                                 <li><a href="{{ route('register') }}"><span class="menu-text"> Register</span></a></li>
+                                 @endif
+                             @endauth
+
+                     @endif
                         </ul>
                     </nav>
                 </div>
@@ -252,11 +268,13 @@
                                 <ul class="dropdown">
                                     <li><a href="frequently-questions.html">FAQ</a></li>
                                     <li><a href="my-account.html">My Account</a></li>
-                                    <li><a href="login-register.html">login &amp; register</a></li>
+                                    <li><a href="{{ 'about' }}">About Us</a></li>
+                                    <li><a href="{{ 'contact' }}">Contact</a></li>
                                 </ul>
                             </li>
-                            <li><a href="{{ 'about' }}">About Us</a></li>
-                            <li><a href="{{ 'contact' }}">Contact</a></li>
+                            <li><a href="{{ route('login') }}"><span class="menu-text">Login</span></a></li>
+                            <li><a href="{{ route('register') }}"><span class="menu-text"> Register</span></a></li>
+
                         </ul>
                     </nav>
                     <!-- mobile menu navigation end -->

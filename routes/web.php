@@ -2,10 +2,12 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MyaccountController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,12 +20,24 @@ use App\Http\Controllers\MyaccountController;
 |
 */
 
+
+Route::get('/clear-cache', function() {
+
+    $exitCode = Artisan::call('config:clear');
+    $exitCode = Artisan::call('cache:clear');
+    $exitCode = Artisan::call('config:cache');
+    return "done ";
+});
+
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 
 Auth::routes();
+
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomepageController::class, 'index'])->name('home');
