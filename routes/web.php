@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\UsersLivewire;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
@@ -18,15 +19,15 @@ use App\Http\Controllers\MyaccountController;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
 
 Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/home', [HomepageController::class, 'index'])->name('home');
+Route::get('/', [HomepageController::class, 'index'])->name('home');
 Route::get('/about', [HomepageController::class, 'about'])->name('about');
 Route::get('/contact', [HomepageController::class, 'contact'])->name('contact');
 Route::get('/blog-list', [HomepageController::class, 'blogList'])->name('blog-list');
@@ -44,4 +45,4 @@ Route::get('/featured-products', [DashboardController::class, 'featuredProducts'
 Route::get('/popular-products', [DashboardController::class, 'popularProducts'])->name('popular-products');
 
 
-
+Route::get('users', UsersLivewire::class)->name('users');
