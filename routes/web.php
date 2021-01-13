@@ -2,8 +2,9 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\HomepageController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MyaccountController;
 
 /*
@@ -36,4 +37,11 @@ Route::get('/my-account', [MyaccountController::class, 'index'])->name('my-accou
 Route::get('/cart', [MyaccountController::class, 'cart'])->name('cart');
 Route::get('/wish-list', [MyaccountController::class, 'wishList'])->name('wish-list');
 Route::get('/check-out', [MyaccountController::class, 'checkOut'])->name('check-out');
+
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/all-products', [DashboardController::class, 'allProducts'])->name('all-products');
+Route::get('/featured-products', [DashboardController::class, 'featuredProducts'])->name('featured-products');
+Route::get('/popular-products', [DashboardController::class, 'popularProducts'])->name('popular-products');
+
+
 
