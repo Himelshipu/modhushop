@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="{{asset ('assets/css/style.css') }}">
 
 </head>
-<body>
+<body id="app">
 
 
 <!-- Header Area Start Here -->
@@ -46,7 +46,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-2 col-xl-2 col-md-6 col-6 col-custom">
                     <div class="header-logo d-flex align-items-center">
-                        <a href="index.html">
+                        <a href="{{ '/' }}">
                            <h3>MODHU<span class="text-danger">SHOP</span></h3>
                         </a>
                     </div>
@@ -55,45 +55,34 @@
                     <nav class="main-nav d-none d-lg-flex">
                         <ul class="nav">
                             <li>
-                                <a href="{{ 'home' }}">
+                                <a href="{{ '/' }}" class="active">
                                     <span class="menu-text"> Home</span>
                                 </a>
 
                             </li>
                             <li>
-                                <a class="active" href="shop.html">
+                                <a >
                                     <span class="menu-text">Category</span>
                                     <i class="fa fa-angle-down"></i>
                                 </a>
                                 <div class="mega-menu dropdown-hover">
                                     <div class="menu-colum">
                                         <ul>
-                                            <li><span class="mega-menu-text">Shop</span></li>
-                                            <li><a class="active" href="shop.html">Shop Left Sidebar</a></li>
-                                            <li><a href="shop-right-sidebar.html">Shop Right Sidebar</a></li>
-                                            <li><a href="shop-list-left.html">Shop List Left Sidebar</a></li>
-                                            <li><a href="shop-list-right.html">Shop List Right Sidebar</a></li>
-                                            <li><a href="shop-fullwidth.html">Shop Full Width</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-colum">
-                                        <ul>
                                             <li><span class="mega-menu-text">Product</span></li>
-                                            <li><a href="product-details.html">Single Product</a></li>
-                                            <li><a href="variable-product-details.html">Variable Product</a></li>
-                                            <li><a href="external-product-details.html">External Product</a></li>
-                                            <li><a href="gallery-product-details.html">Gallery Product</a></li>
-                                            <li><a href="countdown-product-details.html">Countdown Product</a></li>
+                                            <li><a href="product-details.html">Premium</a></li>
+                                            <li><a href="variable-product-details.html">Average</a></li>
+                                            <li><a href="external-product-details.html">Basic</a></li>
                                         </ul>
                                     </div>
-                                    <div class="menu-colum">
-                                        <ul>
-
+                                   <div class="menu-colum">
+                                     <ul>
+                                            <li><span class="mega-menu-text">Order</span></li>
                                             <li><a href="{{ 'cart' }}">Cart Page</a></li>
                                             <li><a href="{{ 'check-out' }}">Checkout Page</a></li>
                                             <li><a href="{{ 'wish-list' }}">Wishlist Page</a></li>
                                         </ul>
                                     </div>
+
                                 </div>
                             </li>
                             <li>
@@ -125,8 +114,6 @@
 
                                 </ul>
                             </li>
-
-
 
 
                              @if (Route::has('login'))
@@ -230,33 +217,23 @@
                             <li class="menu-item-has-children"><a href="{{ 'home' }}">Home</a>
 
                             </li>
-                            <li class="menu-item-has-children"><a href="#">Shop</a>
+                            <li class="menu-item-has-children"><a href="#">Category</a>
                                 <ul class="megamenu dropdown">
-                                    <li class="mega-title has-children"><a href="#">Shop Layouts</a>
+                                    <li class="mega-title has-children"><a href="#">Product</a>
                                         <ul class="dropdown">
-                                            <li><a href="shop.html">Shop Left Sidebar</a></li>
-                                            <li><a href="shop-right-sidebar.html">Shop Right Sidebar</a></li>
-                                            <li><a href="shop-list-left.html">Shop List Left Sidebar</a></li>
-                                            <li><a href="shop-list-right.html">Shop List Right Sidebar</a></li>
-                                            <li><a href="shop-fullwidth.html">Shop Full Width</a></li>
+
+                                            <li><a href="product-details.html">Premium</a></li>
+                                            <li><a href="variable-product-details.html">Average</a></li>
+                                            <li><a href="external-product-details.html">Basic</a></li>
                                         </ul>
                                     </li>
-                                    <li class="mega-title has-children"><a href="#">Product Details</a>
+
+                                    <li class="mega-title has-children"><a href="#">Order</a>
                                         <ul class="dropdown">
-                                            <li><a href="product-details.html">Single Product Details</a></li>
-                                            <li><a href="variable-product-details.html">Variable Product Details</a></li>
-                                            <li><a href="external-product-details.html">External Product Details</a></li>
-                                            <li><a href="gallery-product-details.html">Gallery Product Details</a></li>
-                                            <li><a href="countdown-product-details.html">Countdown Product Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="mega-title has-children"><a href="#">Others</a>
-                                        <ul class="dropdown">
-                                            <li><a href="error404.html">Error 404</a></li>
 
                                             <li><a href="{{ 'cart' }}">Cart Page</a></li>
                                             <li><a href="{{ 'check-out' }}">Checkout Page</a></li>
-                                            <li><a href="{{ 'wish-list' }}">Wish List Page</a></li>
+                                            <li><a href="{{ 'wish-list' }}">Wishlist Page</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -361,7 +338,7 @@
                     <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-custom">
                         <div class="single-footer-widget m-0">
                             <div class="footer-logo">
-                                <a href="index.html">
+                                <a href="{{ ('/') }}">
                                     <h3><span class="text-white">MODHU</span><span class="text-danger">SHOP</span></h3>
                                 </a>
                             </div>
@@ -459,7 +436,7 @@
     <!--Footer Area End-->
 
 <!-- Modernizer JS -->
-{{-- <script src={{ asset('"assets/js/vendor/modernizr-3.7.1.min.js') }}"></script> --}}
+<script src="{{ asset('assets/js/vendor/modernizr-3.7.1.min.js') }}"></script>
 <!-- jQuery JS -->
 <script src="{{ asset('assets/js/vendor/jquery-3.5.1.min.js') }}"></script>
 <!-- Bootstrap JS -->

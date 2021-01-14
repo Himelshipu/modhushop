@@ -6,6 +6,7 @@ use Livewire\Component;
 use Livewire\WithPagination;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Traits\HasRoles;
+use Brian2694\Toastr\Facades\Toastr;
 
 class UsersLivewire extends Component
 {
@@ -57,7 +58,7 @@ class UsersLivewire extends Component
             ]);
             $this->syncrole($user);
             $this->resetInput();
-//            Toastr::success('Successfully member updated.', 'Success');
+           Toastr::success('Successfully member updated.', 'Success');
             $this->emit('userUpdated');
         }
     }
