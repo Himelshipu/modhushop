@@ -58,7 +58,7 @@ Route::get('/popular-products', [DashboardController::class, 'popularProducts'])
 
 
 Route::get('users', UsersLivewire::class)->name('users');
-Route::get('categories', CategoriesLivewire::class)->name('categories');
+Route::get('category', CategoriesLivewire::class)->name('categories');
 Route::get('roles', RolesLivewire::class)->name('roles');
 
 // Route::view('categories','livewire.home');

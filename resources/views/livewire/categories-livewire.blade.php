@@ -37,9 +37,9 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @forelse($categories as $value)
+                            @forelse($categories as $index=>$value)
                                 <tr class="text-center">
-                                    <td>{{ $value->id }}</td>
+                                    <td>{{$categories->firstItem()+$index}}</td>
                                     <td>{{ $value->category_name }}</td>
                                     <td>
                                         @if($value->status == 1 )

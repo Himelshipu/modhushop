@@ -10,6 +10,7 @@ use Brian2694\Toastr\Facades\Toastr;
 class CategoriesLivewire extends Component
 {
     use WithPagination;
+    protected $paginationTheme = 'bootstrap';
 
     public $category_name, $status ,$category_id, $search;
     public $updateMode = false;

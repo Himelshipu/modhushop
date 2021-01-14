@@ -10,7 +10,7 @@
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css"
           href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-          <link rel="stylesheet" href="{{asset('assets/toastr.min.css')}}">
+      <link rel="stylesheet" href="{{asset('assets/toastr.min.css')}}">
     @livewireStyles
     @stack('css')
 </head>
@@ -26,14 +26,12 @@
 <!-- The javascript plugin to display page loading on top-->
 <script src="{{asset('backend/js/plugins/pace.min.js')}}"></script>
 <!-- Page specific javascripts-->
-<script type="text/javascript" src="{{asset('backend/js/plugins/chart.js')}}"></script>
-{{--<script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>--}}
+<script type="text/javascript" src="{{asset('backend/js/plugins/chart.js')}}"></script> 
 <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
 @livewireScripts
 {!! Toastr::message() !!}
 @stack('script')
-<script type="text/javascript">
-
+<script>
     @if ($errors->any())
         @foreach ($errors->all() as $error)
             toastr.error('{{$error}}', 'Error', {
@@ -42,7 +40,8 @@
             });
         @endforeach
     @endif
-
+</script>
+<script type="text/javascript">
     window.livewire.on('userUpdated',()=>{
         $('#userUpdateModal').modal('hide');
     });
