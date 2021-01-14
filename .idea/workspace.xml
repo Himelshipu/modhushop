@@ -22,10 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2ec40e0-6e66-421a-b67b-7d69998e5ec7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/users-livewire.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/users-livewire.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="b2ec40e0-6e66-421a-b67b-7d69998e5ec7" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -160,7 +157,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Chorestop" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -185,7 +182,7 @@
       <option name="presentableId" value="Default" />
       <updated>1610549083500</updated>
       <workItem from="1610549084835" duration="1733000" />
-      <workItem from="1610550891659" duration="6872000" />
+      <workItem from="1610550891659" duration="10490000" />
     </task>
     <servers />
   </component>
@@ -205,14 +202,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="657" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610556153001">
+    <state x="657" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610561932408">
       <screen x="0" y="27" width="1848" height="1053" />
     </state>
-    <state x="657" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1848.1053@0.27.1848.1053" timestamp="1610556153001" />
-    <state x="707" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1610550831127">
+    <state x="657" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1848.1053@0.27.1848.1053" timestamp="1610561932408" />
+    <state x="707" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1610561241920">
       <screen x="0" y="27" width="1848" height="1053" />
     </state>
-    <state x="707" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1848.1053@0.27.1848.1053" timestamp="1610550831127" />
+    <state x="707" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1848.1053@0.27.1848.1053" timestamp="1610561241920" />
     <state x="651" y="257" width="535" height="600" key="NewPhpClassDialog" timestamp="1610554076580">
       <screen x="0" y="27" width="1848" height="1053" />
     </state>
