@@ -22,7 +22,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2ec40e0-6e66-421a-b67b-7d69998e5ec7" name="Default Changelist" comment="" />
+    <list default="true" id="b2ec40e0-6e66-421a-b67b-7d69998e5ec7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/assets/toastr.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/category/deleteModal.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modhushop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modhushop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/CategoriesLivewire.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/CategoriesLivewire.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/layouts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/layouts/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/categories-livewire.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/categories-livewire.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/create-category-livewire.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/category/create-category-livewire.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/update-category-livewire.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/category/update-category-livewire.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -146,6 +157,7 @@
       <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
       <path value="$PROJECT_DIR$/vendor/livewire/livewire" />
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
+      <path value="$PROJECT_DIR$/vendor/brian2694/laravel-toastr" />
     </include_path>
   </component>
   <component name="ProjectId" id="1n1EENtyPUy4A7kHbctz0O8VRPn" />
@@ -157,13 +169,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Chorestop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backend/category" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/backend/category" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/backend/category" />
       <recent name="$PROJECT_DIR$/resources/views" />
     </key>
   </component>
@@ -183,6 +199,7 @@
       <updated>1610549083500</updated>
       <workItem from="1610549084835" duration="1733000" />
       <workItem from="1610550891659" duration="10490000" />
+      <workItem from="1610650014124" duration="2294000" />
     </task>
     <servers />
   </component>
@@ -218,9 +235,9 @@
       <screen x="0" y="27" width="1848" height="1053" />
     </state>
     <state x="413" y="188" width="1022" height="737" key="SettingsEditor/0.27.1848.1053@0.27.1848.1053" timestamp="1610550023794" />
-    <state x="587" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1610556954806">
+    <state x="587" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1610652666511">
       <screen x="0" y="27" width="1848" height="1053" />
     </state>
-    <state x="587" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1848.1053@0.27.1848.1053" timestamp="1610556954806" />
+    <state x="587" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1848.1053@0.27.1848.1053" timestamp="1610652666511" />
   </component>
 </project>

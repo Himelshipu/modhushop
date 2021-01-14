@@ -16,9 +16,13 @@
                         @error('category_name') <span class="text-danger">{{ $message }}</span>@enderror
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlInput2">Status</label>
-                        <input type="text" class="form-control" wire:model="status" id="exampleFormControlInput2" placeholder="Enter status">
-                        @error('status') <span class="text-danger">{{ $message }}</span>@enderror
+                        <label for="exampleFormControlInput1">Status</label>
+                        <select class="form-control" name="" id="" wire:model="status">
+                            <option value="" selected hidden class="form-control">Select Status</option>
+                            <option value="1" class="form-control">Active</option>
+                            <option value="2" class="form-control">Pending</option>
+                        </select>
+                        @error('status') <span class="text-danger error">{{ $message }}</span>@enderror
                     </div>
                 </form>
             </div>

@@ -11,20 +11,17 @@ class CategoriesLivewire extends Component
 {
     use WithPagination;
 
-    public $categories, $category_name, $status ,$category_id,$search;
+    public $category_name, $status ,$category_id, $search;
     public $updateMode = false;
 
     public function render()
     {
         $search = '%'.$this->search . '%';
         $categories = Category::where('category_name','LIKE',$search)
-        ->orWhere('status','LIKE',$search)
-        ->latest()->paginate(2);
-        $this->categories = Category::all();
+                    ->latest()->paginate(2);
         return view('livewire.categories-livewire',compact('categories',))->extends('backend.layouts.index')
         ->section('content');
     }
-
 
     private function resetInputFields(){
         $this->category_name = '';
@@ -38,39 +35,37 @@ class CategoriesLivewire extends Component
             'status' => 'required',
         ]);
         Category::create($validatedDate);
-
-        Toastr::success('Successfully category created.', 'Success');
+        \Toastr::success('Successfully category created.', 'Success');
         // session()->flash('message', 'Category Created Successfully.');
-
         $this->resetInputFields();
-
         $this->emit('CategoryStore');
-        // Close model to using to jquery
+    }
 
-        }
+    public function edit($id)
+    {
+        $this->updateMode = true;
+        $category = Category::where('id',$id)->first();
+        $this->category_id = $id;
+        $this->category_name = $category->category_name;
+        $this->status = $category->status;
+    }
 
-        public function edit($id)
-        {
-            $this->updateMode = true;
-            $category = Category::where('id',$id)->first();
-            $this->category_id = $id;
-            $this->category_name = $category->category_name;
-            $this->status = $category->status;
+    public function deleteModal($id)
+    {
+        $this->updateMode = true;
+        $this->category_id = $id;
+    }
 
-        }
-
-        public function cancel()
+    public function cancel()
     {
         $this->updateMode = false;
         $this->resetInputFields();
-
-
     }
 
 
     public function update()
     {
-        $validatedDate = $this->validate([
+        $this->validate([
             'category_name' => 'required',
             'status' => 'required',
         ]);
@@ -85,7 +80,6 @@ class CategoriesLivewire extends Component
             Toastr::success('Successfully category updated.', 'Success');
             // session()->flash('message', 'Category Updated Successfully.');
             $this->resetInputFields();
-
         }
     }
 
