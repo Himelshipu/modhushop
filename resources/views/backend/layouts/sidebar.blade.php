@@ -2,7 +2,7 @@
 <aside class="app-sidebar">
     <ul class="app-menu">
         <li>
-            <a class="app-menu__item active" href="dashboard.html"><i class="app-menu__icon fa fa-dashboard"></i><span
+            <a class="app-menu__item active" href="{{route('dashboard')}}"><i class="app-menu__icon fa fa-dashboard"></i><span
                     class="app-menu__label">Dashboard</span>
             </a>
         </li>
@@ -20,7 +20,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="treeview-item" href="https://fontawesome.com/v4.7.0/icons/" target="_blank"
+                    <a class="treeview-item" href="{{route('roles')}}"
                        rel="noopener"><i class="icon fa fa-circle-o"></i>
                        Role
                     </a>
@@ -32,20 +32,22 @@
                 </li>
             </ul>
         </li>
-        <li><a class="app-menu__item" href="charts.html"><i class="app-menu__icon fa fa-pie-chart"></i><span
-                    class="app-menu__label">Charts</span></a></li>
+        <li><a class="app-menu__item" href="{{ route('categories') }}"><i class="app-menu__icon fa fa-pie-chart"></i><span
+                    class="app-menu__label">category</span></a></li>
+
+                    <li><a class="app-menu__item" href="charts.html"><i class="app-menu__icon fa fa-pie-chart"></i><span
+                        class="app-menu__label">Slider & banner</span></a></li>
         <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i
-                    class="app-menu__icon fa fa-edit"></i><span class="app-menu__label">Forms</span><i
+                    class="app-menu__icon fa fa-edit"></i><span class="app-menu__label">Products</span><i
                     class="treeview-indicator fa fa-angle-right"></i></a>
             <ul class="treeview-menu">
-                <li><a class="treeview-item" href="form-components.html"><i class="icon fa fa-circle-o"></i> Form
-                        Components</a></li>
-                <li><a class="treeview-item" href="form-custom.html"><i class="icon fa fa-circle-o"></i> Custom
-                        Components</a></li>
-                <li><a class="treeview-item" href="form-samples.html"><i class="icon fa fa-circle-o"></i> Form
-                        Samples</a></li>
-                <li><a class="treeview-item" href="form-notifications.html"><i class="icon fa fa-circle-o"></i> Form
-                        Notifications</a></li>
+                <li><a class="treeview-item" href="form-components.html"><i class="icon fa fa-circle-o"></i> all Products
+                        </a></li>
+                <li><a class="treeview-item" href="form-custom.html"><i class="icon fa fa-circle-o"></i>featued Products
+                        </a></li>
+                <li><a class="treeview-item" href="form-samples.html"><i class="icon fa fa-circle-o"></i> popular products
+                        </a></li>
+
             </ul>
         </li>
         <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i

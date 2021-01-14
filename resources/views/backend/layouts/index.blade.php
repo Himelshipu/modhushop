@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Modhu</title>
+    <title>ModhuShop</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,6 +10,7 @@
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css"
           href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+          <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
     @livewireStyles
     @stack('css')
 </head>
@@ -27,7 +28,15 @@
 <!-- Page specific javascripts-->
 <script type="text/javascript" src="{{asset('backend/js/plugins/chart.js')}}"></script>
 @livewireScripts
+
 @stack('script')
+
+<script type="text/javascript">
+    window.livewire.on('CategoryStore', () => {
+        $('#exampleModal').modal('hide');
+    });
+</script>
+
 <script type="text/javascript">
     window.livewire.on('userUpdated',()=>{
         $('#userUpdateModal').modal('hide');
@@ -97,5 +106,10 @@
         ga('send', 'pageview');
     }
 </script>
+
+<script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+{!! Toastr::message() !!}
+
 </body>
 </html>

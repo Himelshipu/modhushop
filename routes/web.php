@@ -1,9 +1,11 @@
 <?php
 
-ususe App\Http\Livewire\UsersLivewire;
+use App\Http\Livewire\RolesLivewire;
+use App\Http\Livewire\UsersLivewire;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
+use App\Http\Livewire\CategoriesLivewire;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\DashboardController;
@@ -56,3 +58,7 @@ Route::get('/popular-products', [DashboardController::class, 'popularProducts'])
 
 
 Route::get('users', UsersLivewire::class)->name('users');
+Route::get('categories', CategoriesLivewire::class)->name('categories');
+Route::get('roles', RolesLivewire::class)->name('roles');
+
+// Route::view('categories','livewire.home');
