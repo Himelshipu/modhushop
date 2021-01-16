@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\ProductLiviewire;
 use App\Http\Livewire\RolesLivewire;
 use App\Http\Livewire\UsersLivewire;
 use Illuminate\Support\Facades\Auth;
@@ -25,7 +26,6 @@ use App\Http\Controllers\Auth\LoginController;
 
 
 Route::get('/clear-cache', function() {
-
     $exitCode = Artisan::call('config:clear');
     $exitCode = Artisan::call('cache:clear');
     $exitCode = Artisan::call('config:cache');
@@ -52,13 +52,13 @@ Route::get('/wish-list', [MyaccountController::class, 'wishList'])->name('wish-l
 Route::get('/check-out', [MyaccountController::class, 'checkOut'])->name('check-out');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-Route::get('/all-products', [DashboardController::class, 'allProducts'])->name('all-products');
+Route::get('/all-products', [DashboardController::class, 'allProducts'])->name('admin.products');
 Route::get('/featured-products', [DashboardController::class, 'featuredProducts'])->name('featured-products');
 Route::get('/popular-products', [DashboardController::class, 'popularProducts'])->name('popular-products');
 
 
+//Admin Livewire Route
 Route::get('users', UsersLivewire::class)->name('users');
 Route::get('category', CategoriesLivewire::class)->name('categories');
+Route::get('admin/product', ProductLiviewire::class)->name('admin.product');
 Route::get('roles', RolesLivewire::class)->name('roles');
-
-// Route::view('categories','livewire.home');

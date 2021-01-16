@@ -24,7 +24,7 @@
                         <input type="text" placeholder="search...." style="height: 35px;" class="inline float float-right"
                                wire:model="search">
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#categoryModal">
-                            create Category
+                            Add Category
                         </button>
                     </div>
                     <table class="table table-bordered mt-5">
@@ -62,6 +62,5 @@
             </div>
         </div>
     </main>
-        {{-- @include('backend.update') --}}
 </div>
 
