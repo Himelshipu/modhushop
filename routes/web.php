@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Livewire\ProductLiviewire;
+use App\Http\Livewire\ProductLivewire;
 use App\Http\Livewire\RolesLivewire;
 use App\Http\Livewire\UsersLivewire;
 use Illuminate\Support\Facades\Auth;
@@ -60,5 +60,5 @@ Route::get('/popular-products', [DashboardController::class, 'popularProducts'])
 //Admin Livewire Route
 Route::get('users', UsersLivewire::class)->name('users');
 Route::get('category', CategoriesLivewire::class)->name('categories');
-Route::get('admin/product', ProductLiviewire::class)->name('admin.product');
+Route::get('admin/product', ProductLivewire::class)->name('admin.product');
 Route::get('roles', RolesLivewire::class)->name('roles');

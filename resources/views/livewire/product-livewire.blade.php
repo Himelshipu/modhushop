@@ -23,7 +23,7 @@
                     <div class="search">
                         <input type="text" placeholder="search...." style="height: 35px;" class="inline float float-right"
                                wire:model="search">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#categoryModal">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#productModal">
                             Add Product
                         </button>
                     </div>
